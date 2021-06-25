@@ -46,16 +46,16 @@ bot.on('message',(msg) => {
 	).then((jres)=>{
 	    bot.sendMessage(
 	       msg.chat.id,
-		`nilai M1 yang diprediksi adalah ${jres[1]} degree`
+		`nilai M1 yang diprediksi adalah ${jres[4]} degree`
 	        
 	    );  
             bot.sendMessage(
 		msg.chat.id,
-		`nilai M2 yang diprediksi adalah ${jres[2]} degree`
+		`nilai M2 yang diprediksi adalah ${jres[5]} degree`
 	    );
 	    bot.sendMessage(
 		msg.chat.id,
-		`nilai M3 yang diprediksi adalah ${jres[3]} degree`
+		`nilai M3 yang diprediksi adalah ${jres[6]} degree`
 	    );
       })               
     }else{
