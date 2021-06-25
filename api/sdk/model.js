@@ -8,9 +8,9 @@ function normalized(data){ // i & r
 }
 
 function denormalized(data){
-    m1 = data[4] 
-    m2 = data[5] 
-    m3 = data[6]
+    m1 = data[1] 
+    m2 = data[2] 
+    m3 = data[3]
     return [m1, m2, m3]
 }
 
