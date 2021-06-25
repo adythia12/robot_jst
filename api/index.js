@@ -34,28 +34,28 @@ bot.onText(/\/predict/, (msg) => {
 bot.on('message',(msg) => {
     if(state == 1){
         s =msg.text.split("|");
-        x = s[1]
-        y = s[2]
-	z = s[3]
+        x = s[0]
+        y = s[1]
+	z = s[2]
 	model.predict(
 	   [
-             parseFloat(s[1]), // string to float
-             parseFloat(s[2]),
-	     parseFloat(s[3])
+             parseFloat(s[0]), // string to float
+             parseFloat(s[1]),
+	     parseFloat(s[2])
 	   ]
 	).then((jres)=>{
 	    bot.sendMessage(
 	       msg.chat.id,
-		`nilai M1 yang diprediksi adalah ${jres[1]} degree`
+		`nilai M1 yang diprediksi adalah ${jres[0]} degree`
 	        
 	    );  
             bot.sendMessage(
 		msg.chat.id,
-		`nilai M2 yang diprediksi adalah ${jres[2]} degree`
+		`nilai M2 yang diprediksi adalah ${jres[1]} degree`
 	    );
 	    bot.sendMessage(
 		msg.chat.id,
-		`nilai M3 yang diprediksi adalah ${jres[3]} degree`
+		`nilai M3 yang diprediksi adalah ${jres[2]} degree`
 	    );
       })               
     }else{
