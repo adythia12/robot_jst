@@ -40,8 +40,8 @@ bot.on('message',(msg) => {
 	model.predict(
 	   [
              parseFloat(s[1]), // string to float
-             parseFloat(s[2])
-			 parseFloat(s[3])
+             parseFloat(s[2]),
+	     parseFloat(s[3])
 	   ]
 	).then((jres)=>{
 	    bot.sendMessage(
@@ -53,7 +53,7 @@ bot.on('message',(msg) => {
 		msg.chat.id,
 		`nilai M2 yang diprediksi adalah ${jres[2]} degree`
 	    );
-		    bot.sendMessage(
+	    bot.sendMessage(
 		msg.chat.id,
 		`nilai M3 yang diprediksi adalah ${jres[3]} degree`
 	    );
@@ -68,7 +68,7 @@ r.get('/prediction/:x/:y/:z', function(req, res, next) {
     model.predict(
         [
             parseFloat(req.params.x), // string to float
-            parseFloat(req.params.y)
+            parseFloat(req.params.y),
 	    parseFloat(req.params.z)
         ]
     ).then((jres)=>{
@@ -76,4 +76,4 @@ r.get('/prediction/:x/:y/:z', function(req, res, next) {
     })
 });
 
-module.exports = z;
+module.exports = r;
