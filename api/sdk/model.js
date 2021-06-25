@@ -1,16 +1,16 @@
 const tf = require('@tensorflow/tfjs-node');
 
 function normalized(data){ // i & r
-    x = data[1] 
-    y = data[2] 
-    z = data[3]
+    x = data[1] - 10 
+    y = data[2] - 10
+    z = data[3] - 10
     return [x, y, z]
 }
 
 function denormalized(data){
-    m1 = data[1] 
-    m2 = data[2] 
-    m3 = data[3]
+    m1 = data[1] + 10
+    m2 = data[2] + 10
+    m3 = data[3] +10
     return [m1, m2, m3]
 }
 
